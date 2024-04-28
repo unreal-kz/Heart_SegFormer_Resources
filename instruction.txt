@@ -1,0 +1,6 @@
+# Conda environment
+conda create --name <env> --file requirements.txt
+# pip environment
+conda activate <env>
+conda install pip
+pip freeze > requirements.txt
