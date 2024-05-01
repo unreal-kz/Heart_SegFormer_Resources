@@ -1,0 +1,5 @@
+2024-05-01 20:52:06,976 INFO    StreamThr :18136 [internal.py:wandb_internal():86] W&B internal server running at pid: 18136, started at: 2024-05-01 20:52:06.976645
+2024-05-01 20:52:06,977 DEBUG   HandlerThread:18136 [handler.py:handle_request():146] handle_request: status
+2024-05-01 20:52:06,979 INFO    WriterThread:18136 [datastore.py:open_for_write():87] open: C:\Users\rogbeast\Desktop\Heart_SegFormer_Resources\wandb\run-20240501_205206-uhebg9u8\run-uhebg9u8.wandb
+2024-05-01 20:52:06,980 DEBUG   SenderThread:18136 [sender.py:send():382] send: header
+2024-05-01 20:52:07,005 DEBUG   SenderThread:18136 [sender.py:send():382] send: run

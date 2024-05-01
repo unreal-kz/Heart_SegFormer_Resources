@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-05-01T15:52:10.662372",
+    "startedAt": "2024-05-01T15:52:06.971426",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\rogbeast\\Desktop\\Heart_SegFormer_Resources\\FineTuneSAM_SEG_ECHO_v4.py",
+    "codePathLocal": "FineTuneSAM_SEG_ECHO_v4.py",
+    "codePath": "FineTuneSAM_SEG_ECHO_v4.py",
+    "git": {
+        "remote": "https://github.com/unreal-kz/Heart_SegFormer_Resources.git",
+        "commit": "e5c7c726ccc8b1ae382b9a7b3fba127d7f52424c"
+    },
+    "email": "ukibas.b@gmail.com",
+    "root": "C:/Users/rogbeast/Desktop/Heart_SegFormer_Resources",
+    "host": "DESKTOP-EKV7J78",
+    "username": "rogbeast",
+    "executable": "C:\\Users\\rogbeast\\anaconda3\\envs\\hugging_face\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3504.0,
+        "min": 0.0,
+        "max": 3504.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3504.0,
+            "min": 0.0,
+            "max": 3504.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 539.3945274353027,
+            "used": 280.6218070983887
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.883949279785156
+    }
+}

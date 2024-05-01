@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+
+
+
+  0%|                                                                             | 10/8250 [04:04<51:49:06, 22.64s/it]
+
+
+
+
+
+
+
+  0%|▎                                                                                                                                                                      | 17/8250 [07:40<71:30:54, 31.27s/it]Traceback (most recent call last):
+  File "C:\Users\rogbeast\Desktop\Heart_SegFormer_Resources\FineTuneSAM_SEG_ECHO_v4.py", line 182, in <module>
+    trainer.train()
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\transformers\trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\transformers\trainer.py", line 1869, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\transformers\trainer.py", line 2781, in training_step
+    self.accelerator.backward(loss)
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\accelerate\accelerator.py", line 1966, in backward
+    loss.backward(**kwargs)
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\torch\_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "C:\Users\rogbeast\anaconda3\envs\hugging_face\lib\site-packages\torch\autograd\__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

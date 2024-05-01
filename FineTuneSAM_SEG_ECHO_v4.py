@@ -16,7 +16,7 @@ from transformers import (
     SegformerImageProcessor,
 )
 from torch import nn
-import NewProcessor 
+# import NewProcessor
 # start a new wandb run to track this script
 # wandb.init()
 
@@ -53,14 +53,14 @@ def train_transforms(example_batch):
     labels = [x for x in example_batch['label']]
     inputs = processor(images, labels)
     return inputs
-def train_transforms_v2(example_batch):
-    images = []; labels = []
-    for image, label in zip(example_batch['pixel_values'], example_batch['label']):
-        new_image, new_label = NewProcessor(image, label)
-        images.append(new_image)
-        labels.append(new_label)
-    inputs = processor(images, labels)
-    return inputs
+# def train_transforms_v2(example_batch):
+#     images = []; labels = []
+#     for image, label in zip(example_batch['pixel_values'], example_batch['label']):
+#         new_image, new_label = NewProcessor(image, label)
+#         images.append(new_image)
+#         labels.append(new_label)
+#     inputs = processor(images, labels)
+#     return inputs
 def val_transforms(example_batch):
     images = [x for x in example_batch['pixel_values']]
     labels = [x for x in example_batch['label']]
@@ -99,7 +99,7 @@ def compute_metrics(eval_pred):
 
 # pretrained_models = ["nvidia/mit-b0","nvidia/mit-b1","nvidia/mit-b2","nvidia/mit-b3"]
 pretrained_models = ["nvidia/mit-b3", "nvidia/mit-b4"]
-hub_model_id = "500_experiments_model_v3"
+hub_model_id = "250_experiments_model_new_v1"
 seeds_f_name = "MyTrainingSeedsV4.txt"
 
 # rand_seed = np.random.choice(range(100, 999), 2, replace=False)
@@ -134,7 +134,7 @@ for pretrained_model_name in pretrained_models:
         the_seed = rand_seed[cnt]
         # if pretrained_model_name == "nvidia/mit-b4" and the_seed > 100:
         #     continue
-        project_name = "-".join([pretrained_model_name.split(sep="-")[-1],"250-8-1e3"])#"250-16-1e4"
+        project_name = "-".join([pretrained_model_name.split(sep="-")[-1],"250-8-1e5"])#"250-16-1e4"
 
         ds = load_dataset(hf_dataset_identifier, split='all')
         ds = ds.shuffle(seed=the_seed)
@@ -150,7 +150,7 @@ for pretrained_model_name in pretrained_models:
         wandb.init(
             project=project_name,
             name="-".join(["rand-seed",str(the_seed)]),
-            config={"epochs": 250, "batch_size": 8, "learning_rate":1e-3},
+            config={"epochs": 250, "batch_size": 8, "learning_rate":1e-5},
             # config={"epochs": 50, "batch_size": 8, "learning_rate":1e-5},
             # config={"epochs": 25, "batch_size": 8, "learning_rate":1e-5},
         )
