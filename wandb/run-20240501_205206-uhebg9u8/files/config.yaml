@@ -43,6 +43,7 @@ _wandb:
       - 71
       - 100
       3:
+      - 2
       - 7
       - 13
       - 16
@@ -69,6 +70,150 @@ _wandb:
       6:
       - 1
     - 1: train/epoch
+      5: 1
+      6:
+      - 1
+    - 1: eval/loss
+      5: 1
+      6:
+      - 1
+    - 1: eval/mean_iou
+      5: 1
+      6:
+      - 1
+    - 1: eval/mean_accuracy
+      5: 1
+      6:
+      - 1
+    - 1: eval/overall_accuracy
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_unlabeled
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_LV
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_RV
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_RA
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_LA
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_ASD
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_VSD
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_TK
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_VS
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_MK
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_AS
+      5: 1
+      6:
+      - 1
+    - 1: eval/accuracy_AK
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_unlabeled
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_LV
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_RV
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_RA
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_LA
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_ASD
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_VSD
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_TK
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_VS
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_MK
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_AS
+      5: 1
+      6:
+      - 1
+    - 1: eval/iou_AK
+      5: 1
+      6:
+      - 1
+    - 1: eval/runtime
+      5: 1
+      6:
+      - 1
+    - 1: eval/samples_per_second
+      5: 1
+      6:
+      - 1
+    - 1: eval/steps_per_second
+      5: 1
+      6:
+      - 1
+    - 1: train/train_runtime
+      5: 1
+      6:
+      - 1
+    - 1: train/train_samples_per_second
+      5: 1
+      6:
+      - 1
+    - 1: train/train_steps_per_second
+      5: 1
+      6:
+      - 1
+    - 1: train/total_flos
+      5: 1
+      6:
+      - 1
+    - 1: train/train_loss
       5: 1
       6:
       - 1
