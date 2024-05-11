@@ -1,35 +1,8 @@
-import torch
-import os
-import wandb
-import json
-import evaluate
-import multiprocessing
-import numpy as np
-import random
-from huggingface_hub import hf_hub_download
-from datasets import load_dataset
-from transformers import SegformerForSemanticSegmentation
-from transformers import TrainingArguments
-from transformers import Trainer
-from torchvision.transforms import ColorJitter
-from transformers import (
-    SegformerImageProcessor,
-)
-from torch import nn
+
 # import NewProcessor
 # start a new wandb run to track this script
 # wandb.init()
 
-# List all available GPUs
-if torch.cuda.is_available():
-    print("Available CUDA Devices:")
-    for i in range(torch.cuda.device_count()):
-        print(f"Device {i}: {torch.cuda.get_device_name(i)}")
-else:
-    print("No CUDA devices are available")
-# Check CUDA_VISIBLE_DEVICES environment variable
-cuda_visible_devices = os.getenv('CUDA_VISIBLE_DEVICES')
-print("CUDA_VISIBLE_DEVICES:", cuda_visible_devices if cuda_visible_devices is not None else "Not set (All GPUs are visible)")
 
 # from huggingface_hub import notebook_login
 # # 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

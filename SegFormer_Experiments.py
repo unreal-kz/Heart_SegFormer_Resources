@@ -29,15 +29,16 @@ cuda_visible_devices = os.getenv('CUDA_VISIBLE_DEVICES')
 print("CUDA_VISIBLE_DEVICES:", cuda_visible_devices if cuda_visible_devices is not None else "Not set (All GPUs are visible)")
 
 
-experiments_list = [{"epochs": 50, "batch_size": 8, "learning_rate":1e-5},
-                    {"epochs": 50, "batch_size": 8, "learning_rate":1e-4},
-                    {"epochs": 50, "batch_size": 8, "learning_rate":1e-3},
-                    {"epochs": 75, "batch_size": 16, "learning_rate":1e-5},
-                    {"epochs": 75, "batch_size": 16, "learning_rate":1e-4},
-                    {"epochs": 75, "batch_size": 16, "learning_rate":1e-3},
+experiments_list = [{"epochs": 150, "batch_size": 8, "learning_rate":1e-6},
+                    #{"epochs": 150, "batch_size": 8, "learning_rate":1e-5},
+                    # {"epochs": 50, "batch_size": 8, "learning_rate":1e-4},
+                    # {"epochs": 50, "batch_size": 8, "learning_rate":1e-3},
+                    # {"epochs": 75, "batch_size": 16, "learning_rate":1e-5},
+                    # {"epochs": 75, "batch_size": 16, "learning_rate":1e-4},
+                    # {"epochs": 75, "batch_size": 16, "learning_rate":1e-3},
                     ]
 
-pretrained_models = ["nvidia/mit-b0","nvidia/mit-b1","nvidia/mit-b2","nvidia/mit-b3","nvidia/mit-b4"]
+pretrained_models = ["nvidia/mit-b0","nvidia/mit-b1","nvidia/mit-b2","nvidia/mit-b3","nvidia/mit-b4","nvidia/mit-b5"]
 
 # Open the file in read mode ('r') and use readlines() to read all lines into a list
 with open('MyTrainingSeedsV4.txt', 'r') as file:
@@ -122,7 +123,7 @@ for myConfig in experiments_list:
             the_seed = rand_seed[cnt]
             ds = load_dataset(hf_dataset_identifier, split='all')
             ds = ds.shuffle(seed=the_seed)
-            ds = ds.train_test_split(test_size=0.2)
+            ds = ds.train_test_split(test_size=0.2,shuffle=False)
             train_ds = ds["train"]
             print(train_ds)
             test_ds = ds["test"]
